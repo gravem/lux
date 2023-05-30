@@ -12,6 +12,10 @@ class CarsController < ApplicationController
     @car = Car.new
   end
 
+  def my_cars
+    @cars = Car.where(user: current_user)
+  end
+
   def create
     @car = Car.new(car_params)
     @car.user = current_user
