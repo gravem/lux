@@ -2,7 +2,7 @@
 
 <div class="container d-flex">
   <% @cars.each do |car| %>
-    <div class="card" style="width: 18rem;">
+    <div class="card mb-3 flex" style="width: 18rem;">
       <%# <%= image_tag car.photo %>
       <div class="card-body">
         <h5 class="card-title"><%= car.brand %> | <%= car.model %></h5>
@@ -13,3 +13,5 @@
     </div>
   <% end %>
 </div>
+
+<%= link_to "New Car", new_car_path, class: 'btn btn-outline-dark' %>
