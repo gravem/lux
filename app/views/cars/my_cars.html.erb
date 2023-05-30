@@ -1,1 +1,17 @@
-<h1>My Cars</h1>
+<h1><%= current_user.first_name %>'s cars</h1>
+<div class="container">
+  <div class="d-flex">
+    <% @cars.each do |car| %>
+      <div class="card mb-3 flex" style="width: 18rem;">
+        <%# cl_image_tag car.photo.key %>
+        <div class="card-body">
+          <h5 class="card-title"><%= car.brand %> | <%= car.model %></h5>
+          <p class="card-text"><%= car.description %></p>
+          <%= link_to "Edit", edit_car_path(car), class: 'btn btn-outline-dark' %>
+          <%= link_to "Delete", car_path(car), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}, class: 'btn btn-outline-secondary' %>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>
+<%= link_to "New Car", new_car_path, class: 'btn btn-outline-dark' %>
