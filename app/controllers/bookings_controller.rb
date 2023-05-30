@@ -5,9 +5,11 @@ class BookingsController < ApplicationController
 
   def create
     @booking = Booking.new(booking_params)
+    @car = Car.find(params[:car_id])
     @booking.user = current_user
-    if @booking.save
-      redirect_to @booking
+    @booking.car = @car
+    if @booking.save!
+      redirect_to car_path(@car)
     else
       render :new, status: :unprocessable_entity
     end
@@ -16,6 +18,6 @@ class BookingsController < ApplicationController
   private
 
   def booking_params
-    params.require(:booking).permit(:start_date, :end_date, :car_id)
+    params.require(:booking).permit(:start_date, :end_date)
   end
 end
