@@ -3,7 +3,7 @@
   <div class="d-flex">
     <% @cars.each do |car| %>
       <div class="card mb-3 flex" style="width: 18rem;">
-        <%# cl_image_tag car.photo %>
+        <%# cl_image_tag car.photo.key %>
         <div class="card-body">
           <h5 class="card-title"><%= car.brand %> | <%= car.model %></h5>
           <p class="card-text"><%= car.description %></p>
