@@ -1,0 +1,13 @@
+<h2><%= @car.brand %></h2>
+
+<p><%= @car.model %></p>
+<p><%= @car.description %></p>
+<%# <% if @car.photo.attached? %>
+<%# <%= cl_image_tag @car.photo.key, height: 400, width: 400, crop: :fill %>
+<%# <% end %>
+<%= link_to "Back", cars_path %> |
+<%= link_to "Edit", edit_car_path(@car) %> |
+<%= link_to "Delete",
+  car_path(@car),
+  data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}
+%>

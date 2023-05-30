@@ -1,0 +1,9 @@
+<h1>New Car</h1>
+<%= simple_form_for [@car] do |f| %>
+  <%= f.input :brand %>
+  <%= f.input :model %>
+  <%= f.input :year %>
+  <%= f.input :description %>
+  <%= f.input :photo, as: :file %>
+  <%= f.submit "Submit car", class: "btn btn-primary" %>
+<% end %>
