@@ -23,13 +23,13 @@
             <div class="card-body d-flex flex-column">
               <div class="d-flex justify-content-between">
                 <div>
-                  <h5 class="card-title">LuxCar Name</h5>
+                  <h5 class="card-title"><%= "#{car.brand} #{car.model}" %></h5>
                 </div>
                 <div>
                   <h5 class="card-title text-right">Price</h5>
                 </div>
               </div>
-              <p class="card-text mt-3">Why you should definitely choose this car</p>
+              <p class="card-text mt-3"><%= car.description %></p>
             </div>
           </div>
         </a>
