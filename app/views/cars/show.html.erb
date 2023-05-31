@@ -12,4 +12,9 @@
   data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}
 %>
 
-<%= link_to "New Car", new_car_path  %>
+<%= simple_form_for [@car, @booking] do |f| %>
+  <%= f.input :start_date %>
+  <%= f.input :end_date%>
+  <%= f.submit "book car", class: "btn btn-primary" %>
+
+<% end %>
