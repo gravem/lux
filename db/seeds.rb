@@ -16,8 +16,22 @@ user3 = User.create!(first_name: 'Jane', last_name: 'Doe', email: 'user2@test.co
 user4 = User.create!(first_name: 'Sarah', last_name: 'Connor', email: 'user3@test.com', password: '123456')
 
 puts 'adding cars to user'
-Car.create!(brand: 'Mercedes', model: '', year: 'Mon, 29 May 2023', description: '', user: user1)
-Car.create!(brand: 'Lexus', model: '', year: 'Mon, 29 May 2023', description: '', user: user2)
+Car.create!(brand: 'Mercedes', model: 'C-Class', year: 'Mon, 29 May 2023', description: 'A luxury in its own right', user: user1)
+Car.create!(brand: 'Lexus', model: 'RX', year: 'Mon, 29 May 2023', description: 'Utility mixed with luxury', user: user2)
+Car.create!(brand: 'Porsche', model: 'Carrera', year: 'Mon, 29 May 2023', description: 'A very lovely car', user: user1)
+Car.create!(brand: 'Mercedes', model: 'E-Class', year: 'Tues, 30 May 2023', description: 'Sit back, relax and enjoy', user: user2)
+Car.create!(brand: 'Ferrari', model: 'Spider', year: 'Wed, 31 May 2023', description: 'Speed and utitlity mastered', user: user1)
+Car.create!(brand: 'Lamborghini', model: 'Urus', year: 'Mon, 29 May 2023', description: 'A modern SUV', user: user2)
+Car.create!(brand: 'BMW', model: 'i8', year: 'Wed, 31 May 2023', description: 'Futuristic Luxury', user: user1)
+Car.create!(brand: 'Aston Martin', model: 'Vantage', year: 'Mon, 29 May 2023', description: "Even James Bond wouldn't let this one go", user: user3)
+Car.create!(brand: 'Rolls Royce', model: 'Phantom', year: 'Mon, 29 May 2023', description: 'The true definition of luxury', user: user3)
+Car.create!(brand: 'Bugatti', model: 'La Voiture Noire', year: 'Mon, 29 May 2023', description: "The world's most expensive car", user: user4)
+
+
+
+
+
+
 
 # usernumber = 1
 # 10.times do
