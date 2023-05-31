@@ -1,9 +1,12 @@
 <div class="row">
-  <% @cars.each do |car|%>
-    <div class="col">
-      <a href="<%= car_path(car) %>" class="text-decoration-none">
-        <div class="card">
+  <% cars.each do |car|%>
+    <div class="col-1"></div>
+    <div class="col-4">
+      
+      <%= link_to car_path(car), class: "text-dark text-decoration-none"  do %>
+        <div class="card mb-3 shadow-sm">
           <div class="card-body d-flex flex-column">
+          <%= cl_image_tag car.photo.key, height: 300, class: "card-image" %>
             <div class="d-flex justify-content-between">
               <div>
                 <h5 class="card-title"><%= "#{car.brand} #{car.model}" %></h5>
@@ -15,7 +18,8 @@
             <p class="card-text mt-3"><%= car.description %></p>
           </div>
         </div>
-      </a>
+      <% end %>
     </div>
+    <div class="col-1"></div>
   <% end %>
 </div>

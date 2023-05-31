@@ -11,9 +11,9 @@
   <div class="row justify-content-center">
     <div class="row col-12 justify-content-center">
       <a href="cars/#id" class="text-decoration-none">
-        <h2 class="text-primary">All our LuxCars</h2>
+        <h2 class="text-dark">All our LuxCars</h2>
       </a>
     </div>
   </div>
-    <%= render 'shared/car_card' %>
+    <%= render 'car_card', cars: @cars %>
 </div>
