@@ -27,12 +27,6 @@ Car.create!(brand: 'Aston Martin', model: 'Vantage', year: 'Mon, 29 May 2023', d
 Car.create!(brand: 'Rolls Royce', model: 'Phantom', year: 'Mon, 29 May 2023', description: 'The true definition of luxury', user: user3)
 Car.create!(brand: 'Bugatti', model: 'La Voiture Noire', year: 'Mon, 29 May 2023', description: "The world's most expensive car", user: user4)
 
-
-
-
-
-
-
 # usernumber = 1
 # 10.times do
 #   user = User.create!(
