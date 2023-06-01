@@ -19,13 +19,13 @@ user4 = User.create!(first_name: 'Sarah', last_name: 'Connor', email: 'user3@tes
 
 puts 'adding cars to user'
 
-file_car1 = URI.open("https://upload.wikimedia.org/wikipedia/commons/thumb/9/9b/Mercedes-Benz_W213_E_350_4_matic_AMG_Line_white_%28cropped%29.jpg/560px-Mercedes-Benz_W213_E_350_4_matic_AMG_Line_white_%28cropped%29.jpg")
+file_car1 = URI.open("https://media.autoexpress.co.uk/image/private/s--hCniKi2M--/v1682436220/evo/2023/04/2023%20Mercedes%20Eclass.jpg")
 car1 = Car.create!(brand: 'Mercedes', model: 'E-Class', year: 'Mon, 29 May 2012', description: 'A luxury in its own right', user: user1)
 car1.photo.attach(io: file_car1, filename: "merc-e.jpg", content_type: "image/jpg")
 car1.save
 
-file_car2 = URI.open("https://upload.wikimedia.org/wikipedia/commons/thumb/0/01/2021_Lexus_IS_300_AWD%2C_front_%282%29_3.26.21.jpg/560px-2021_Lexus_IS_300_AWD%2C_front_%282%29_3.26.21.jpg")
-car2 = Car.create!(brand: 'Lexus', model: 'Lexus IS', year: 'Mon, 29 May 2016', description: 'Utility mixed with luxury', user: user2)
+file_car2 = URI.open("https://www.topgear.com/sites/default/files/2022/07/1_3.jpg")
+car2 = Car.create!(brand: 'Lexus', model: 'IS', year: 'Mon, 29 May 2016', description: 'Utility mixed with luxury', user: user2)
 car2.photo.attach(io: file_car2, filename: "lexus.jpg", content_type: "image/jpg")
 car2.save
 
@@ -39,42 +39,42 @@ car2.save
 # car4.photo.attach(io: file_car4, filename: "lamba.jpg", content_type: "image/jpg")
 # car4.save
 
-file_car5 = URI.open("https://upload.wikimedia.org/wikipedia/commons/thumb/d/dc/2020_Porsche_Taycan_4S_79kWh_Front.jpg/560px-2020_Porsche_Taycan_4S_79kWh_Front.jpg")
+file_car5 = URI.open("https://ev-database.org/img/auto/Porsche_Taycan_Turbo_S/Porsche_Taycan_Turbo_S-01@2x.jpg")
 car5 = Car.create!(brand: 'Porsche', model: 'Taycan', year: 'Mon, 29 May 2022', description: 'A very lovely car', user: user1)
 car5.photo.attach(io: file_car5, filename: "porsche.jpg", content_type: "image/jpg")
 car5.save
 
-file_car6 = URI.open("https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/Mercedes-Benz_W463_G_350_BlueTEC_01.jpg/560px-Mercedes-Benz_W463_G_350_BlueTEC_01.jpg")
+file_car6 = URI.open("https://images.prismic.io/carwow/d7d113bc-6570-4db2-aa5c-0fbbecb43e90_2021+Mercedes+G-Class+front+quarter+moving+2.jpg")
 car6 = Car.create!(brand: 'Mercedes', model: 'G-Class', year: 'Tues, 30 May 2019', description: 'Sit back, relax and enjoy', user: user2)
 car6.photo.attach(io: file_car6, filename: "merc-g.jpg", content_type: "image/jpg")
 car6.save
 
-file_car7 = URI.open("https://upload.wikimedia.org/wikipedia/commons/thumb/3/37/2017_Ferrari_488_GTB_Automatic_3.9.jpg/560px-2017_Ferrari_488_GTB_Automatic_3.9.jpg")
+file_car7 = URI.open("https://images.caradisiac.com/logos-ref/modele/modele--ferrari-488-gtb/S0-modele--ferrari-488-gtb.jpg")
 car7 = Car.create!(brand: 'Ferrari', model: '488', year: 'Wed, 31 May 2017', description: 'Speed and utitlity mastered', user: user1)
 car7.photo.attach(io: file_car7, filename: "ferrari.jpg", content_type: "image/jpg")
 car7.save
 
-file_car8 = URI.open("https://upload.wikimedia.org/wikipedia/commons/thumb/9/97/Lamborghini_Aventador_LP700-4_Orange.jpg/560px-Lamborghini_Aventador_LP700-4_Orange.jpg")
-car8 = Car.create!(brand: 'Lamborghini', model: 'Aventador', year: 'Mon, 29 May 2014', description: 'A modern SUV', user: user2)
+file_car8 = URI.open("https://hips.hearstapps.com/hmg-prod/images/autentica-001-1675636392.jpg?resize=980:*")
+car8 = Car.create!(brand: 'Lamborghini', model: 'Aventador', year: 'Mon, 29 May 2014', description: 'A modern supercar', user: user2)
 car8.photo.attach(io: file_car8, filename: "lamba.jpg", content_type: "image/jpg")
 car8.save
 
-file_car9 = URI.open("https://upload.wikimedia.org/wikipedia/commons/thumb/a/a2/BMW_i8_Concept_IAA.jpg/440px-BMW_i8_Concept_IAA.jpg")
+file_car9 = URI.open("https://www.wardsauto.com/sites/wardsauto.com/files/styles/article_featured_retina/public/uploads/2014/05/bmw-i8-main.jpg?itok=NNgOqJqN")
 car9 = Car.create!(brand: 'BMW', model: 'i8', year: 'Wed, 31 May 2012', description: 'Futuristic Luxury', user: user1)
 car9.photo.attach(io: file_car9, filename: "bmw.jpg", content_type: "image/jpg")
 car9.save
 
-file_car10 = URI.open("https://upload.wikimedia.org/wikipedia/commons/thumb/3/32/2017_Aston_Martin_V12_Vantage_S%2C_Jet_Black%2C_front_left.jpg/2560px-2017_Aston_Martin_V12_Vantage_S%2C_Jet_Black%2C_front_left.jpg")
+file_car10 = URI.open("https://paultan.org/image/2023/03/Aston-Martin-Vantage-F1-Edition-Malaysia-launch-1.jpg")
 car10 = Car.create!(brand: 'Aston Martin', model: 'Vantage', year: 'Mon, 29 May 2017', description: "Even James Bond wouldn't let this one go", user: user3)
 car10.photo.attach(io: file_car10, filename: "aston.jpg", content_type: "image/jpg")
 car10.save
 
-file_car11 = URI.open("https://upload.wikimedia.org/wikipedia/commons/thumb/b/b1/4rrpdh.jpg/560px-4rrpdh.jpg")
+file_car11 = URI.open("https://www.topgear.com/sites/default/files/cars-car/image/2017/10/_jl58227.jpg")
 car11 = Car.create!(brand: 'Rolls Royce', model: 'Phantom', year: 'Mon, 29 May 2008', description: 'The true definition of luxury', user: user3)
 car11.photo.attach(io: file_car11, filename: "rolls.jpg", content_type: "image/jpg")
 car11.save
 
-file_car12 = URI.open("https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Veyron_SS.jpg/560px-Veyron_SS.jpg")
+file_car12 = URI.open("https://www.carscoops.com/wp-content/uploads/2022/08/2012-Bugatti-Veyron-16.4-Grand-Sport-Vitesse-1.jpg")
 car12 = Car.create!(brand: 'Bugatti', model: 'Veyron', year: 'Mon, 29 May 2007', description: "The world's most expensive car", user: user4)
 car12.photo.attach(io: file_car12, filename: "bugatti.jpg", content_type: "image/jpg")
 car12.save
