@@ -40,7 +40,7 @@ car2.save
 # car4.save
 
 file_car5 = URI.open("https://ev-database.org/img/auto/Porsche_Taycan_Turbo_S/Porsche_Taycan_Turbo_S-01@2x.jpg")
-car5 = Car.create!(brand: 'Porsche', model: 'Taycan', year: 'Mon, 29 May 2022', description: 'A very lovely car', user: user1)
+car5 = Car.create!(brand: 'Porsche', model: 'Taycan', year: 'Mon, 29 May 2022', description: 'A very very lovely car', user: user1)
 car5.photo.attach(io: file_car5, filename: "porsche.jpg", content_type: "image/jpg")
 car5.save
 
@@ -60,7 +60,7 @@ car8.photo.attach(io: file_car8, filename: "lamba.jpg", content_type: "image/jpg
 car8.save
 
 file_car9 = URI.open("https://www.wardsauto.com/sites/wardsauto.com/files/styles/article_featured_retina/public/uploads/2014/05/bmw-i8-main.jpg?itok=NNgOqJqN")
-car9 = Car.create!(brand: 'BMW', model: 'i8', year: 'Wed, 31 May 2012', description: 'Futuristic Luxury', user: user1)
+car9 = Car.create!(brand: 'BMW', model: 'i8', year: 'Wed, 31 May 2012', description: 'Futuristic luxury just for you', user: user1)
 car9.photo.attach(io: file_car9, filename: "bmw.jpg", content_type: "image/jpg")
 car9.save
 
@@ -70,7 +70,7 @@ car10.photo.attach(io: file_car10, filename: "aston.jpg", content_type: "image/j
 car10.save
 
 file_car11 = URI.open("https://www.topgear.com/sites/default/files/cars-car/image/2017/10/_jl58227.jpg")
-car11 = Car.create!(brand: 'Rolls Royce', model: 'Phantom', year: 'Mon, 29 May 2008', description: 'The true definition of luxury', user: user3)
+car11 = Car.create!(brand: 'Rolls Royce', model: 'Phantom', year: 'Mon, 29 May 2008', description: 'The truest definition of luxury', user: user3)
 car11.photo.attach(io: file_car11, filename: "rolls.jpg", content_type: "image/jpg")
 car11.save
 
