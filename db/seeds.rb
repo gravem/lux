@@ -17,7 +17,6 @@ user2 = User.create!(first_name: 'John', last_name: 'Doe', email: 'user1@test.co
 user3 = User.create!(first_name: 'Jane', last_name: 'Doe', email: 'user2@test.com', password: '123456')
 user4 = User.create!(first_name: 'Sarah', last_name: 'Connor', email: 'user3@test.com', password: '123456')
 
-
 puts 'adding cars to user'
 
 file_car1 = URI.open("https://upload.wikimedia.org/wikipedia/commons/thumb/9/9b/Mercedes-Benz_W213_E_350_4_matic_AMG_Line_white_%28cropped%29.jpg/560px-Mercedes-Benz_W213_E_350_4_matic_AMG_Line_white_%28cropped%29.jpg")

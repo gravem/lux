@@ -1,19 +1,37 @@
-<div class="mt-3">
-   <div class="row justify-content-center">
-     <div class="row col-12">
-       <h1>LuxCar Rental 4 Lyfe</h1>
-     </div>
-     <div class="row col-12">
-       <p>Welcome to our Luxury Car hire site where we realise your dreams of driving a car that's far too expensive around for a day and then giving it back and being charged far more than you initially planned</p>
-     </div>
-   </div>
+<div class="dark-background">
+  <div class="banner" style="background-image: linear-gradient(rgba(17,23,35, 0), 80%, rgba(17,23,35, 1)), url(<%= image_path("ferrari_home.jpg") %>);">
+    <div class="container">
+      <h3 id="lux-logo">LUX</h3>
+      <a class="btn btn-flat" href="#">Apply now</a>
+    </div>
+  </div>
 
   <div class="row justify-content-center">
-    <div class="row col-12 justify-content-center">
-      <a href="cars/#id" class="text-decoration-none">
-        <h2 class="text-dark">All our LuxCars</h2>
-      </a>
+    <div class = "row col-2"></div>
+    <div class="row col-8">
+      <h1 id="open-text">This is Lux</h1>
     </div>
+    <div class = "row col-2"></div>
+    <div class = "row col-2"></div>
+    <div class="row col-8">
+      <p class="text-center">Welcome to Lux – your doorway to elegance, power, and style. <br><br>Explore elite vehicles,
+       each offering an unforgettable blend of speed and luxury.<br><br> With Lux, you’re not merely hiring
+        a car; you’re stepping into grandeur.<br><br>Here, every journey is a statement. Welcome to Lux.</p>
+    </div>
+    <div class = "row col-2"></div>
+  </div>
+
+
+  <div class="row justify-content-center">
+    <div class = "row col-2"></div>
+      <div class="row col-8 justify-content-center">
+        <div class="row col-4"></div>
+        <div class="row col-4">
+          <a class="btn btn-ghost mt-3 mb-5" href="cars/#id">All our LuxCars</a>
+        </div>
+        <div class="row col-4"></div>
+      </div>
+    <div class = "row col-2"></div>
   </div>
   <%= render 'car_card', cars: @cars %>
 </div>
