@@ -16,13 +16,22 @@
     </div>
   </div>
 
- <div id='car-booking-dates'>
+ <div class="container-form" data-controller="date-picker">
+  <div data-controller="toggle" class="mt-5">
+   <button data-action="click->toggle#fire" class="btn btn-ghost">Book</button>
+
+   <div data-toggle-target="togglableElement" class="d-none">
     <% if current_user.id != @car.user_id  %>
        <%= simple_form_for([@car, @booking]) do |f| %>
-           <%= f.input :start_date, as: :flatpickr, input_html: { data: { 'date-enable-time': false } }%>
-           <%= f.input :end_date, as: :flatpickr, input_html: { data: { 'date-enable-time': false } } %>
-           <%= f.submit "Book", class: "btn btn-primary" %>
+           <%= f.input :start_date, as: :date, html5: true%>
+           <%#= f.input :end_date, input_html: { data: { date-picker-target: "end"} }%>
+           <%= f.input :end_date, as: :date, html5: true%>
+           <%= f.submit "Book", class: "btn btn-ghost" %>
         <% end %>
     <% end %>
+   </div>
+
  </div>
+
+  </div>
 </div>
