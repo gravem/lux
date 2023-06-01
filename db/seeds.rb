@@ -7,7 +7,8 @@ require "open-uri"
 #
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
-
+# Review.destroy_all
+# Booking.destroy_all
 Car.destroy_all
 User.destroy_all
 
@@ -70,11 +71,11 @@ car10.photo.attach(io: file_car10, filename: "aston.jpg", content_type: "image/j
 car10.save
 
 file_car11 = URI.open("https://www.topgear.com/sites/default/files/cars-car/image/2017/10/_jl58227.jpg")
-car11 = Car.create!(brand: 'Rolls Royce', model: 'Phantom', year: 'Mon, 29 May 2008', description: 'The truest definition of luxury', user: user3)
+car11 = Car.create!(brand: 'Rolls Royce', model: 'Phantom', year: 'Mon, 29 May 2008', description: 'The truest definition of luxury', user: user4)
 car11.photo.attach(io: file_car11, filename: "rolls.jpg", content_type: "image/jpg")
 car11.save
 
-file_car12 = URI.open("https://www.carscoops.com/wp-content/uploads/2022/08/2012-Bugatti-Veyron-16.4-Grand-Sport-Vitesse-1.jpg")
+file_car12 = URI.open("https://media.evo.co.uk/image/upload/v1578500236/evo/2020/01/Bugatti%20Veyron-25.jpg")
 car12 = Car.create!(brand: 'Bugatti', model: 'Veyron', year: 'Mon, 29 May 2007', description: "The world's most expensive car", user: user4)
 car12.photo.attach(io: file_car12, filename: "bugatti.jpg", content_type: "image/jpg")
 car12.save
