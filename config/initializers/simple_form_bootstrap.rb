@@ -43,7 +43,15 @@ SimpleForm.setup do |config|
   config.input_field_error_class = 'is-invalid'
   config.input_field_valid_class = 'is-valid'
 
+  config.wrappers :flatpickr, tag: 'div', class: 'input', error_class: 'field_with_errors' do |b|
+    b.use :html5
+    b.use :placeholder
 
+    b.use :flatpickr
+    b.use :input, class: 'form-control'
+    b.use :error, wrap_with: { tag: 'span', class: 'error' }
+    b.use :hint,  wrap_with: { tag: 'span', class: 'hint' }
+  end
   # vertical forms
   #
   # vertical default_wrapper

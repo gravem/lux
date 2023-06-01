@@ -34,6 +34,7 @@ gem "jbuilder"
 # Adding user Authenticator
 gem "devise"
 
+
 # Use Redis adapter to run Action Cable in production
 # gem "redis", "~> 4.0"
 
