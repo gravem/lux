@@ -16,12 +16,13 @@
     </div>
   </div>
 
-  <% if @car.user != current_user %>
-  <h3>Book this car</h3>
-    <%= simple_form_for [@car, @booking] do |f| %>
-      <%= f.input :start_date %>
-      <%= f.input :end_date%>
-      <%= f.submit "book car", class: "btn btn-primary" %>
+ <div id='car-booking-dates'>
+    <% if current_user.id != @car.user_id  %>
+       <%= simple_form_for([@car, @booking]) do |f| %>
+           <%= f.input :start_date, as: :flatpickr, input_html: { data: { 'date-enable-time': false } }%>
+           <%= f.input :end_date, as: :flatpickr, input_html: { data: { 'date-enable-time': false } } %>
+           <%= f.submit "Book", class: "btn btn-primary" %>
+        <% end %>
     <% end %>
-  <% end %>
+ </div>
 </div>
