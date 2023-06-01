@@ -1,1 +1,43 @@
 // Specific CSS for your home-page
+.dark-background {
+  background-color: #111723;
+  color: white;
+}
+
+#lux-logo {
+  font-size: 180px;
+  font-family: 'Foldit', 'Lato', cursive;
+  text-align: center;
+  text-shadow: 10px 5px 15px rgb(208, 179, 51);
+  margin-top: -50px;
+}
+
+#open-text {
+  font-size: 60px;
+  text-align: center;
+}
+
+#cars-link {
+  font-size: 40px;
+  text-align: center;
+  color: white;
+  font-family: 'Roboto Flex', sans-serif !important;
+}
+
+.btn-ghost {
+  color: #ffffff;
+  border: 2px solid #ffffff;
+  padding: 12px 40px;
+  border-radius: 20px;
+  font-weight: lighter;
+  opacity: 1;
+  transition: all 0.3s ease;
+  font-size: 25px;
+}
+
+.btn-ghost:hover {
+  background-color: rgb(208, 179, 51);
+  color: #000000;
+  border: 2px solid #000000;
+  opacity: 1;
+}
