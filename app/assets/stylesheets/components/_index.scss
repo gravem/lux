@@ -8,3 +8,9 @@
 @import "banner";
 @import "from";
 @import "card_product";
+
+#search-field {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
