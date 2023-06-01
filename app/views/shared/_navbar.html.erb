@@ -2,7 +2,7 @@
   <div class="container-fluid">
     <%= link_to root_path do %>
 
-    <%= image_tag "lux_logo.png", class: "navbar-brand", width: "30px" %>
+    <%= image_tag "lux_logo.png", class: "navbar-brand", width: "50px" %>
     <% end %>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -11,14 +11,14 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto">
         <% if user_signed_in? %>
-        <li class="nav-item active">
-        <p> <%= current_user.first_name %> <%= current_user.last_name %></p>
 
-          </li>
+        <p > <%= link_to "All cars", cars_path, class: 'nav-link' %> </p>
+        <p class="nav-link"> <%= current_user.first_name %> <%= current_user.last_name %></p>
+
 
           <li class="nav-item dropdown">
           <a href="#" class="avatar" id="navbarDropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            <%= image_tag "https://kitt.lewagon.com/placeholder/users/ssaunier", class: "avatar", alt: "dropdown menu" %>
+            <%= image_tag "menu_icon.png", class: "avatar", alt: "dropdown menu" %>
           </a>
             <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
               <%= link_to "My cars", my_cars_path, class: "dropdown-item" %>

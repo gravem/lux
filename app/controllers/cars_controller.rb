@@ -1,7 +1,11 @@
 class CarsController < ApplicationController
 
   def index
-    @cars = Car.all
+    if params[:query].present?
+      @cars = Car.search_by_brand_and_model(params[:query])
+    else
+      @cars = Car.all
+    end
   end
 
   def show
@@ -44,7 +48,7 @@ class CarsController < ApplicationController
   def destroy
     @car = Car.find(params[:id])
     @car.destroy
-    redirect_to cars_path, status: :see_other
+    redirect_to my_cars_path, status: :see_other
   end
 
   private
