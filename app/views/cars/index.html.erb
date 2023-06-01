@@ -1,3 +1,4 @@
+<div class="container">
 <h1>All Cars</h1>
 
 <%= form_with url: cars_path, method: :get, class: "d-flex" do %>
@@ -13,3 +14,4 @@
   <%= render 'pages/car_card', cars: @cars %>
 </div>
 <%= link_to "New Car", new_car_path  %>
+</div>
