@@ -1,19 +1,19 @@
 <div class="container">
-<h1 class="mx-5 px-5">All Cars</h1>
+  <h1 class="mx-5 px-5 text-center">All Cars</h1>
 
-<div class="mx-5 px-5 col-8">
-  <%= form_with url: cars_path, method: :get, class: "d-flex" do %>
-    <%= text_field_tag :query,
-      params[:query],
-      class: "form-control",
-      placeholder: "Find a car"
-    %>
-    <%= submit_tag "Search", class: "btn btn-primary" %>
-  <% end %>
-</div>
+  <div id="search-field" class="mx-5 px-5">
+    <%= form_with url: cars_path, method: :get, class: "d-flex" do %>
+      <%= text_field_tag :query,
+        params[:query],
+        class: "form-control",
+        placeholder: "Find a car"
+      %>
+      <%= submit_tag "Search", class: "btn btn-primary" %>
+    <% end %>
+  </div>
 
-<div>
-  <%= render 'pages/car_card', cars: @cars %>
-</div>
-<%= link_to "New Car", new_car_path  %>
+  <div>
+    <%= render 'pages/car_card', cars: @cars %>
+  </div>
+  <%= link_to "New Car", new_car_path  %>
 </div>
