@@ -5,33 +5,33 @@
       <a class="btn btn-flat" href="#">Apply now</a>
     </div>
   </div>
-
-  <div class="row justify-content-center">
-    <div class = "row col-2"></div>
-    <div class="row col-8">
-      <h1 id="opening-h1">This is Lux</h1>
-    </div>
-    <div class = "row col-2"></div>
-    <div class = "row col-2"></div>
-    <div class="row col-8">
-      <p id="opening-text" class="text-center">Welcome to Lux – your doorway to elegance, power, and style. <br>Explore elite vehicles,
-       each offering an unforgettable blend of speed and luxury. <br>With Lux, you’re not merely hiring
-        a car; you’re stepping into grandeur.</p>
-    </div>
-    <div class = "row col-2"></div>
-  </div>
-
-
-  <div class="row justify-content-center">
-    <div class = "row col-2"></div>
-      <div class="row col-8 justify-content-center">
-        <div class="row col-4"></div>
-        <div class="row col-4">
-          <a class="btn btn-ghost mt-4 mb-5" href="cars/#id">All our LuxCars</a>
-        </div>
-        <div class="row col-4"></div>
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class = "row col-2"></div>
+      <div class="row col-8">
+        <h1 id="opening-h1">This is Lux</h1>
       </div>
-    <div class = "row col-2"></div>
+      <div class = "row col-2"></div>
+      <div class = "row col-2"></div>
+      <div class="row col-8">
+        <p id="opening-text" class="text-center">Welcome to Lux – your doorway to elegance, power, and style. <br>Explore elite vehicles,
+        each offering an unforgettable blend of speed and luxury. <br>With Lux, you’re not merely hiring
+          a car; you’re stepping into grandeur.</p>
+      </div>
+      <div class = "row col-2"></div>
+    </div>
+
+    <div class="row justify-content-center">
+      <div class = "row col-2"></div>
+        <div class="row col-8 justify-content-center">
+          <div class="row col-4"></div>
+          <div class="row col-4">
+            <a class="btn btn-ghost mt-4 mb-5" href="cars/#id">All our LuxCars</a>
+          </div>
+          <div class="row col-4"></div>
+        </div>
+      <div class = "row col-2"></div>
+    </div>
+    <%= render 'car_card', cars: @cars %>
   </div>
-  <%= render 'car_card', cars: @cars %>
 </div>
