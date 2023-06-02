@@ -27,10 +27,15 @@
 
 .marketing-box {
   overflow: hidden;
+  text-align: center;
   background: #111723;
   box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
   padding: 35px;
   position: relative;
+  i {
+    font-size: 2rem;
+    margin-bottom: 20px;
+  }
 }
 
 #cars-link {
