@@ -1,9 +1,14 @@
-<h1>Edit Car</h1>
-<%= simple_form_for [@car] do |f| %>
-  <%= f.input :brand %>
-  <%= f.input :model %>
-  <%= f.input :year %>
-  <%= f.input :description %>
-  <%= f.input :photo, as: :file %>
-  <%= f.submit "Submit car", class: "btn btn-primary" %>
-<% end %>
+<div class="container mt-5">
+
+  <h1 class="border-bottom border-white">Edit Car</h1>
+  <%= simple_form_for [@car] do |f| %>
+    <%= f.input :brand, input_html: { style: 'background-color: black; color:white' } %>
+    <%= f.input :model, input_html: { style: 'background-color: black; color:white' } %>
+    <%= f.input :year, input_html: { style: 'background-color: black; color:white' } %>
+    <%= f.input :description, input_html: { style: 'background-color: black; color:white' } %>
+    <%= f.input :photo, as: :file, input_html: { style: 'background-color: black; color:white' } %>
+    <%= f.submit "Submit car", class: "btn btn-outline-light  btn-md" %>
+  <% end %>
+
+</div>
+<div class= "h-100 d-inline-block"></div>
