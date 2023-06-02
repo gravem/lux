@@ -5,11 +5,13 @@
   <div id="search-field" class="mx-5 px-5">
     <%= form_with url: cars_path, method: :get, class: "d-flex" do %>
       <%= text_field_tag :query,
+
         params[:query],
         class: "form-control",
         placeholder: "Find a car"
+
       %>
-      <%= submit_tag "Search", class: "btn btn-primary" %>
+      <%= submit_tag "Search", class: "btn btn-outline-light  btn-md" %>
     <% end %>
   </div>
 
