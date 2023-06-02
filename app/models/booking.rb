@@ -3,5 +3,5 @@ class Booking < ApplicationRecord
   belongs_to :car
 
   validates :start_date, :end_date, presence: true
-  has_many :reviews
+  has_many :reviews, dependent: :destroy
 end
