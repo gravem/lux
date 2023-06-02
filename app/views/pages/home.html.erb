@@ -20,7 +20,31 @@
       </div>
       <div class = "row col-2"></div>
     </div>
-
+    <div id="container-marketing" class="container marketing-section">
+      <div class="row justify-content-center col">
+        <div class="col-md-4">
+          <h4>Explore and Share Luxury</h4>
+          <div class="marketing-box">
+            <p>Browse our elite vehicle collection for your dream ride, or share your own
+            luxury car with our global network of enthusiasts.</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <h4>Simple and Secure Process</h4>
+          <div class="marketing-box">
+            <p>Whether booking a vehicle or listing your own, Lux's platform ensures a seamless
+            and secure process with dedicated support always at hand.</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <h4>Unleash the Extraordinary</h4>
+          <div class="marketing-box">
+            <p>Embark on unforgettable journeys in our luxury rentals, or watch your vehicle
+            create memorable experiences for others.</p>
+          </div>
+        </div>
+      </div>
+    </div>
     <div class="row justify-content-center">
       <div class = "row col-2"></div>
         <div class="row col-8 justify-content-center">
@@ -32,6 +56,30 @@
         </div>
       <div class = "row col-2"></div>
     </div>
-    <%= render 'car_card', cars: @cars %>
+    <div class="row">
+      <% @cars.each_with_index do |car, index| %>
+        <% if index < 3 %>
+          <div class="col-2"></div>
+          <div class="col-8">
+            <%= link_to car_path(car), class: "text-dark text-decoration-none" do %>
+              <div id="car-card" class="card mb-5 mt-3 shadow-sm">
+                <div class="card-body p-0">
+                  <%= cl_image_tag car.photo.key, class: "card-img-top" %>
+                  <div class="p-3 text-light">
+                    <div class="d-flex justify-content-between">
+                      <div>
+                        <h5 class="card-title text-center"><%= "#{car.brand} #{car.model} #{car.year.strftime("%Y")}" %></h5>
+                        <p class="card-text mt-3"><%= car.description %></p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            <% end %>
+          </div>
+          <div class="col-2"></div>
+        <% end %>
+      <% end %>
+    </div>
   </div>
 </div>

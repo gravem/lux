@@ -1,5 +1,9 @@
 class CarsController < ApplicationController
 
+  def home
+    @cars = Car.all
+  end
+
   def index
     if params[:query].present?
       @cars = Car.search_by_brand_and_model(params[:query])
