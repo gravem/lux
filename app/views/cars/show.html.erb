@@ -48,9 +48,9 @@
   <% if @car.reviews.exists? %>
     <div class="mb-5">
       <h2><strong>Reviews</strong></h2>
-      <ul class="list-group">
+      <ul class="list-group reviews">
         <% @car.reviews.each do |review| %>
-        <li class="list-group-item">
+        <li class="list-group-item border-bottom">
           <%= review.content %>
         </li>
         <% end %>
