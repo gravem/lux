@@ -5,7 +5,7 @@
   font-size: 180px;
   font-family: 'Foldit', 'Lato', cursive;
   text-align: center;
-  text-shadow: 8px 5px 0px rgb(208, 179, 51);
+  text-shadow: 4px 0px 0px #ffcc00;
   margin-top: -50px;
 }
 
@@ -14,7 +14,27 @@
   text-align: center;
 }
 
+.marketing h2 {
+  text-align: center !important;
+  font-family: 'Roboto Flex', sans-serif !important;
+  font-weight: 200 !important;
+}
 
+.marketing p {
+  font-size: 30px;
+  text-align: center;
+}
+
+.marketing-box {
+  overflow: hidden;
+  background: #111723;
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
+  padding: 35px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  position: relative;
+}
 
 #cars-link {
   font-size: 40px;
@@ -45,6 +65,22 @@
 
 
 #opening-h1 {
+  text-align: center;
+  font-family: 'Roboto Flex', sans-serif !important;
+  font-weight: 200 !important;
+}
+
+.marketing-section {
+  padding-top: 50px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.marketing-box {
+  margin-bottom: 20px;
+}
+
+.col-md-4 h4{
   text-align: center;
   font-family: 'Roboto Flex', sans-serif !important;
   font-weight: 200 !important;
