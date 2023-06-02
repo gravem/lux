@@ -3,3 +3,13 @@
   height: 500px;
   object-fit: cover;
 }
+
+
+#car-card {
+  background: transparent !important;
+  border-style: solid !important;
+  border-width: 0px 0px 0px 0px !important;
+  border-color: white !important;
+  border-radius: 0.3rem !important;
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.2) !important;
+}
