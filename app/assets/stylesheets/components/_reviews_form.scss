@@ -1,0 +1,25 @@
+.reviews {
+  background-color: #111723;
+  padding: 15px;
+  color: white;
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
+
+
+  ul {
+    min-height: 50px;
+    max-height: 120px;
+    overflow-y: scroll;
+  }
+
+  .list-group-item {
+    background-color: #111723 !important;
+    color: white;
+    padding-left: 0;
+  }
+
+  .fa-trash-can {
+    margin-left: 15px;
+    font-size: 0.9rem;
+  }
+
+}
