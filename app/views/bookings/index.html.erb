@@ -32,7 +32,7 @@
           <h5 class="mt-3"><strong>Reviews</strong></h5>
           <ul class="list-group">
             <% booking.reviews.each do |review| %>
-              <li class="list-group-item">
+              <li class="list-group-item border-bottom">
                 <%= review.content %>
                 <% if review.booking.user == current_user %>
                   <%= link_to review_path(review), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} do %>
