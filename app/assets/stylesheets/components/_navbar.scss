@@ -28,10 +28,14 @@
 
   &:hover {
     color: white;
+  }
+
+  &:first-child:hover {
+    color: white;
     text-decoration: none;
     text-shadow: 2px 2px 4px #ffffff;
   }
- 
+
 }
 
 .navbar-lewagon .nav-link {
