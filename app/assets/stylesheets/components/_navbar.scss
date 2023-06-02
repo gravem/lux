@@ -5,6 +5,7 @@
   padding-bottom: 0.1px;
 }
 
+
 .navbar-lewagon .navbar-collapse {
   flex-grow: 0;
 }
@@ -25,12 +26,21 @@
   color: white;
   padding-right: 5px;
 
+  &:hover {
+    color: white;
+    text-decoration: none;
+    text-shadow: 2px 2px 4px #ffffff;
+  }
+ 
 }
+
 .navbar-lewagon .nav-link {
   padding-right: 2px;
+
 
 }
 .nav-link a:link {
   text-decoration: none;
   color: white;
+  text-shadow: 2px 2px 4px #ffffff;
 }
