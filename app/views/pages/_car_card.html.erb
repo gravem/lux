@@ -12,6 +12,13 @@
                   <h5 class="card-title text-center"><%= "#{car.brand} #{car.model} #{car.year.strftime("%Y")}" %></h5>
                   <p class="card-text mt-3"><%= car.description %></p>
                 </div>
+                <div>
+                  <% if car.reviews != [] %>
+                    <% (car.reviews.map(&:rating).sum / car.reviews.count).times do %>
+                      <i class="fa-solid fa-star" style="color: #ffffff;"></i>
+                    <% end %>
+                  <% end %>
+                </div>
               </div>
             </div>
           </div>
