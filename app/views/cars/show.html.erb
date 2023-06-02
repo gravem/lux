@@ -3,35 +3,52 @@
     <%= cl_image_tag @car.photo.key, crop: :fill %>
     <div class="card-trip-infos">
       <div>
-        <h2><%= @car.brand %> - <%= @car.model %></h2>
-        <p><%= @car.description %></p>
+        <h2 class="mb-2"><%= @car.brand %> - <%= @car.model %></h2>
+        <p class="mb-2"><%= @car.description %></p>
         <p>Owned by <%= @car.user.first_name %></p>
       </div>
-      <%= link_to "Back", cars_path, class: 'btn btn-outline-dark'  %>
-      <%= link_to "Edit", edit_car_path(@car), class: 'btn btn-outline-dark'  %>
-      <%= link_to "Delete",
-          car_path(@car), class: 'btn btn-outline-dark',
-          data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}
-      %>
+      <div class="align-items-center mb-1">
+        <%= link_to "Back", cars_path, class: 'btn btn-outline-light mx-2 btn-sm' %>
+        <%= link_to "Edit", edit_car_path(@car), class: 'btn btn-outline-light mx-2 btn-sm' %>
+        <%= link_to "Delete",
+            car_path(@car), class: 'btn btn-outline-light mx-2 btn-sm',
+            data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}
+        %>
+      </div>
     </div>
   </div>
 
- <div id='car-booking-dates'>
+ <div class="container-form" data-controller="date-picker">
+  <div data-controller="toggle" class="mt-5">
+   <button data-action="click->toggle#fire" class="btn btn-ghost">Book</button>
+
+   <div data-toggle-target="togglableElement" class="d-none">
     <% if current_user.id != @car.user_id  %>
        <%= simple_form_for([@car, @booking]) do |f| %>
-           <%= f.input :start_date, as: :flatpickr, input_html: { data: { 'date-enable-time': false } }%>
-           <%= f.input :end_date, as: :flatpickr, input_html: { data: { 'date-enable-time': false } } %>
-           <%= f.submit "Book", class: "btn btn-primary" %>
+           <%= f.input :start_date, as: :date, html5: true%>
+           <%#= f.input :end_date, input_html: { data: { date-picker-target: "end"} }%>
+           <%= f.input :end_date, as: :date, html5: true%>
+           <%= f.submit "Book", class: "btn btn-outline-light" %>
         <% end %>
     <% end %>
+   </div>
+
  </div>
+
+  </div>
 </div>
 
-  <p><strong>Reviews</strong></p>
-  <ul class="list-group">
-     <% @car.reviews.each do |review| %>
-     <li class="list-group-item">
-     <%= review.content %>
-   </li>
+  <% if @car.reviews.exists? %>
+    <div class="mb-5">
+      <h2><strong>Reviews</strong></h2>
+      <ul class="list-group">
+        <% @car.reviews.each do |review| %>
+        <li class="list-group-item">
+          <%= review.content %>
+        </li>
+        <% end %>
+      </ul>
+    </div>
   <% end %>
-  </ul>
+
+</div>

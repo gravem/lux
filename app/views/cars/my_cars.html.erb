@@ -1,13 +1,13 @@
 <div class="container">
 <h1><%= current_user.first_name %>'s cars</h1>
-<%= link_to "Add a new car", new_car_path, class: 'btn btn-outline-dark mb-4' %>
+<%= link_to "Add a new car", new_car_path, class: 'btn btn-outline-light mb-4' %>
 
-<div class="row col-8 align-items-center">
+<div class="row col-12 align-items-center">
   <div class="flex-row">
     <% @cars.each do |car| %>
       <div class="card-product mb-4">
-        <div class="card-product-img">
-          <%= link_to car_path(car), class: "text-decoration-none"  do %>
+        <div class="card-product-img dark-card-color">
+          <%= link_to car_path(car), class: "text-decoration-none" do %>
             <%= cl_image_tag car.photo.key, class: '' %>
           <% end %>
         </div>
@@ -19,9 +19,9 @@
             <p><%= car.description %></p>
           </div>
 
-          <div class="mx-3">
-            <%= link_to "Edit", edit_car_path(car), class: 'btn btn-outline-dark d-block mb-2' %>
-            <%= link_to "Delete", car_path(car),
+          <div class="mx-4">
+            <%= link_to "Edit details", edit_car_path(car), class: 'btn btn-outline-light d-block mb-2' %>
+            <%= link_to "Delete this car", car_path(car),
                 data: {turbo_method: :delete,
                 turbo_confirm: "Are you sure?"},
                 class: 'btn btn-outline-secondary d-block' %>
