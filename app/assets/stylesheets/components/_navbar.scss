@@ -2,6 +2,7 @@
   justify-content: space-between;
   background: #111723;
   border-bottom: #686c72;
+  padding-bottom: 0.1px;
 }
 
 .navbar-lewagon .navbar-collapse {
@@ -10,12 +11,26 @@
 
 .navbar-lewagon .navbar-brand img {
   width: 40px;
-
+  padding: auto;
 }
 #dropdown {
   background-color: #686c72;
 
 }
 .nav-item  {
+  color: white;
+}
+
+.nav-link {
+  color: white;
+  padding-right: 5px;
+
+}
+.navbar-lewagon .nav-link {
+  padding-right: 2px;
+
+}
+.nav-link a:link {
+  text-decoration: none;
   color: white;
 }

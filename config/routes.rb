@@ -9,6 +9,12 @@ Rails.application.routes.draw do
   resources :cars do
     resources :bookings, only: [:create]
   end
-  resources :bookings, only: [:index, :destroy]
+
+  resources :bookings, only: [:index, :destroy] do
+    resources :reviews, only: [:new, :create]
+  end
+
+  resources :reviews, only: [:destroy]
+
 
 end
